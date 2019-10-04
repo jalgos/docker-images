@@ -12,4 +12,4 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Build the Docker image for rclone
-      run: ls -la && docker build ./rclone --file Dockerfile --tag docker.pkg.github.com/jalgos/docker-images/rclone:1.48.0
+      run: ls -la && docker build -t docker.pkg.github.com/jalgos/docker-images/rclone:1.48.0 ./rclone
