@@ -1,15 +1,15 @@
 name: Docker Image CI
 
-on: 
+on:
   push:
-    branches: 
+    branches:
       - master
 
 jobs:
   build:
     runs-on: ubuntu-latest
- 
+
     steps:
-    - uses: actions/checkout@v1
-    - name: Build the Docker image for rclone
-      run: ls -la && docker build -t docker.pkg.github.com/jalgos/docker-images/rclone:1.48.0 ./rclone
+      - uses: actions/checkout@v1
+      - name: Build the Docker image for rclone
+        run: docker build -t docker.pkg.github.com/jalgos/docker-images/rclone:1.48.0 ./rclone
